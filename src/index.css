@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-light: #ffffff;
+  --color-dark: #171717;
+}
+
+.accent-text {
+  @apply text-slate-600;
+}
+
+body {
+  font-family:
+    "Inter Variable",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+  color: var(--color-dark);
+  background: var(--color-light);
+}
+
+/* Custom red theme overrides */
+.bg-primary {
+  @apply bg-red-600;
+}
+
+.text-primary {
+  @apply text-red-600;
+}
+
+.border-primary {
+  @apply border-red-600;
+}
+
+.hover\:bg-primary-hover:hover {
+  @apply bg-red-700;
+}
+
+.focus\:border-primary:focus {
+  @apply border-red-600;
+}
+
+.focus\:ring-primary:focus {
+  @apply ring-red-600;
+}
+
+/* Updated auth input styling to match the design */
+.auth-input-field {
+  @apply w-full px-4 py-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 outline-none transition-all duration-200 text-base;
+}
+
+.auth-input-field:focus {
+  @apply bg-gray-600 shadow-lg;
+}
+
+/* Updated auth button styling */
+.auth-button {
+  @apply w-full px-4 py-4 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700 focus:bg-red-700 transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed text-base;
+}
+
+.auth-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+/* Hide elements we don't want */
+.hide-signup-elements {
+  display: none !important;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-red-600 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-red-700;
+}
+
+/* Login page specific styles */
+.login-container {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+.login-card {
+  background: rgba(31, 41, 55, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+.login-logo {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+}
+
+/* Style the form to hide unwanted elements */
+.auth-form-container form > div:last-child {
+  display: none !important;
+}
+
+.auth-form-container form > button:last-child {
+  display: none !important;
+}
+
+.auth-form-container hr {
+  display: none !important;
+}
+
+.auth-form-container form > div:nth-last-child(2) {
+  display: none !important;
+}
+
+.auth-form-container form > div:nth-last-child(3) {
+  display: none !important;
+}
